@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50:  #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+  }
+}
+
+@layer components {
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl border border-slate-200 shadow-sm;
+  }
+  .card-blue {
+    @apply bg-blue-50 rounded-2xl border border-blue-100;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold
+           hover:bg-blue-700 active:bg-blue-800
+           transition-all duration-200 shadow-sm shadow-blue-200;
+  }
+  .btn-secondary {
+    @apply bg-white text-slate-700 border border-slate-200 px-5 py-2.5
+           rounded-xl font-semibold hover:bg-slate-50 hover:border-slate-300
+           transition-all duration-200 shadow-sm;
+  }
+
+  /* Inputs */
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white
+           text-slate-900 placeholder-slate-400
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+           transition-all text-sm shadow-sm;
+  }
+
+  /* Sidebar link */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium
+           text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-all;
+  }
+  .sidebar-link-active {
+    @apply bg-blue-50 text-blue-700 border border-blue-100;
+  }
+
+  /* Badge */
+  .badge {
+    @apply text-xs font-bold px-2.5 py-1 rounded-full border;
+  }
+  .badge-high   { @apply bg-red-50   text-red-700   border-red-200; }
+  .badge-medium { @apply bg-amber-50 text-amber-700 border-amber-200; }
+  .badge-low    { @apply bg-emerald-50 text-emerald-700 border-emerald-200; }
+}

@@ -1,0 +1,52 @@
+# Python / Backend
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+*.log
+*.pot
+*.pyc
+dist/
+build/
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+backend/.venv/
+.venv/
+venv/
+env/
+
+# Trained model files (large — regenerate with train script)
+backend/trained_models/*.h5
+backend/trained_models/*.pkl
+
+# Generated files
+backend/datasets/uploads/
+backend/datasets/gradcam/
+backend/reports/
+backend/colonai.db
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Augmented dataset (large — regenerate with augment_data.py)
+backend/datasets/augmented/
