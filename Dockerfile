@@ -17,4 +17,4 @@ COPY backend/utils/ ./backend/utils/
 COPY backend/trained_models/kvasir_public/ ./backend/trained_models/kvasir_public/
 COPY --from=frontend /build/frontend/dist/ ./frontend/dist/
 EXPOSE 8080
-CMD ["gunicorn", "--chdir", "backend", "--config", "gunicorn.conf.py", "app:create_app()"]
+CMD ["gunicorn", "--chdir", "backend", "--config", "/app/backend/gunicorn.conf.py", "app:create_app()"]
