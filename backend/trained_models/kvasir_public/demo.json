@@ -15,30 +15,30 @@
       },
       {
         "label": "dyed-resection-margins",
-        "score": 8.1e-05
+        "score": 0.000081
       },
       {
         "label": "normal-pylorus",
-        "score": 6e-06
+        "score": 0.000006
       },
       {
         "label": "dyed-lifted-polyps",
-        "score": 3e-06
+        "score": 0.000003
       },
       {
         "label": "polyps",
-        "score": 1e-06
+        "score": 0.000001
       },
       {
         "label": "ulcerative-colitis",
-        "score": 1e-06
+        "score": 0.000001
       },
       {
         "label": "normal-cecum",
-        "score": 0.0
+        "score": 0
       }
     ],
-    "model_sha256": "fae3ba03e1c25a1a692db02e5665230261ba5179b87a659f1bfda9332d4d26f5",
+    "model_sha256": "1636dc609583779406ef1c49c46e245e93cf155b4efa268a7a54a92333ffe739",
     "dataset": "Kvasir v2",
     "dataset_url": "https://datasets.simula.no/kvasir/"
   }

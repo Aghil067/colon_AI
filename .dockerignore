@@ -14,6 +14,7 @@
 !backend/trained_models/
 !backend/trained_models/kvasir_public/
 !backend/trained_models/kvasir_public/classifier.keras
+!backend/trained_models/kvasir_public/classifier.h5
 !backend/trained_models/kvasir_public/evaluation.json
 !backend/trained_models/kvasir_public/demo.json
 !backend/trained_models/kvasir_public/demo-image.jpg

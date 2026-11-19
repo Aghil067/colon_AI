@@ -28,10 +28,14 @@ class ImageClassifier:
         self.logger = logger
         model_path = self.directory / "classifier.keras"
         metadata_path = self.directory / "evaluation.json"
-        if not (model_path.is_file() and metadata_path.is_file()):
+        if not metadata_path.is_file():
             return
         try:
             metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+            model_file = metadata.get("model_file", "classifier.keras")
+            if model_file not in {"classifier.keras", "classifier.h5"}:
+                raise ValueError("Unsupported classifier filename.")
+            model_path = self.directory / model_file
             if (metadata["schema_version"] != 1 or metadata["dataset_url"] != DATASET_URL
                     or tuple(metadata["classes"]) != CLASSES
                     or metadata["model_sha256"] != file_sha256(model_path)):
