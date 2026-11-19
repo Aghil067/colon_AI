@@ -16,7 +16,7 @@ const Login = () => {
     setError(''); setIsLoading(true);
     const result = await login(email, password);
     if (result.success) {
-      const user = JSON.parse(localStorage.getItem('user'));
+      const user = result.user;
       navigate(user.role === 'doctor' ? '/doctor/dashboard' : '/patient/dashboard');
     } else {
       setError(result.message);
