@@ -1,0 +1,45 @@
+{
+  "dataset_label": "esophagitis",
+  "image_sha256": "399d6a014bbd619fc9f726b0fa0441c494b86a79a1644676142169ab97106211",
+  "heatmap_sha256": "9999d02297ca59cc567a524138f50728010a058bd3c002d203687d252ebe4d9d",
+  "inference": {
+    "label": "esophagitis",
+    "classes": [
+      {
+        "label": "esophagitis",
+        "score": 0.997239
+      },
+      {
+        "label": "normal-z-line",
+        "score": 0.002668
+      },
+      {
+        "label": "dyed-resection-margins",
+        "score": 8.1e-05
+      },
+      {
+        "label": "normal-pylorus",
+        "score": 6e-06
+      },
+      {
+        "label": "dyed-lifted-polyps",
+        "score": 3e-06
+      },
+      {
+        "label": "polyps",
+        "score": 1e-06
+      },
+      {
+        "label": "ulcerative-colitis",
+        "score": 1e-06
+      },
+      {
+        "label": "normal-cecum",
+        "score": 0.0
+      }
+    ],
+    "model_sha256": "fae3ba03e1c25a1a692db02e5665230261ba5179b87a659f1bfda9332d4d26f5",
+    "dataset": "Kvasir v2",
+    "dataset_url": "https://datasets.simula.no/kvasir/"
+  }
+}

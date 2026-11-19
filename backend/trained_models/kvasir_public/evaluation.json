@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "dataset": "Kvasir v2",
+  "dataset_url": "https://datasets.simula.no/kvasir/",
+  "archive_sha256": "1c7129a377a7730d019e1d18808e26bb33d5b0af986bfd067783ba986d297fc4",
+  "model_sha256": "fae3ba03e1c25a1a692db02e5665230261ba5179b87a659f1bfda9332d4d26f5",
+  "architecture": "MobileNetV2 transfer learning",
+  "classes": [
+    "dyed-lifted-polyps",
+    "dyed-resection-margins",
+    "esophagitis",
+    "normal-cecum",
+    "normal-pylorus",
+    "normal-z-line",
+    "polyps",
+    "ulcerative-colitis"
+  ],
+  "preparation": {
+    "source_images": 8000,
+    "unique_usable_images": 7987,
+    "excluded_entries": 13,
+    "conflicting_image_hashes": 1
+  },
+  "split": {
+    "training": 5590,
+    "validation": 1198,
+    "test": 1199
+  },
+  "accuracy": 0.8532110091743119,
+  "macro_f1": 0.8530323264745756,
+  "per_class": {
+    "dyed-lifted-polyps": {
+      "precision": 0.8527131782945736,
+      "recall": 0.7333333333333333,
+      "f1-score": 0.7885304659498208,
+      "support": 150.0
+    },
+    "dyed-resection-margins": {
+      "precision": 0.7844311377245509,
+      "recall": 0.8733333333333333,
+      "f1-score": 0.8264984227129337,
+      "support": 150.0
+    },
+    "esophagitis": {
+      "precision": 0.859504132231405,
+      "recall": 0.6933333333333334,
+      "f1-score": 0.7675276752767528,
+      "support": 150.0
+    },
+    "normal-cecum": {
+      "precision": 0.89375,
+      "recall": 0.9533333333333334,
+      "f1-score": 0.9225806451612903,
+      "support": 150.0
+    },
+    "normal-pylorus": {
+      "precision": 0.9455782312925171,
+      "recall": 0.9266666666666666,
+      "f1-score": 0.936026936026936,
+      "support": 150.0
+    },
+    "normal-z-line": {
+      "precision": 0.7043010752688172,
+      "recall": 0.8733333333333333,
+      "f1-score": 0.7797619047619048,
+      "support": 150.0
+    },
+    "polyps": {
+      "precision": 0.8791946308724832,
+      "recall": 0.8791946308724832,
+      "f1-score": 0.8791946308724831,
+      "support": 149.0
+    },
+    "ulcerative-colitis": {
+      "precision": 0.9571428571428572,
+      "recall": 0.8933333333333333,
+      "f1-score": 0.9241379310344828,
+      "support": 150.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      110,
+      34,
+      0,
+      1,
+      0,
+      0,
+      5,
+      0
+    ],
+    [
+      16,
+      131,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      104,
+      0,
+      0,
+      46,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      143,
+      0,
+      0,
+      5,
+      2
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      139,
+      8,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      14,
+      0,
+      5,
+      131,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      9,
+      3,
+      1,
+      131,
+      3
+    ],
+    [
+      2,
+      1,
+      1,
+      6,
+      0,
+      0,
+      6,
+      134
+    ]
+  ],
+  "method": "Stratified image-level 70/15/15 split with seed 42. Exact duplicates were collapsed, and images with conflicting labels were excluded before splitting.",
+  "limitations": "Patient-level independence, external validation, and clinical performance were not established."
+}

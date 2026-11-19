@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: colonai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/status
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: TF_NUM_INTEROP_THREADS
+        value: "1"
+      - key: TF_NUM_INTRAOP_THREADS
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
